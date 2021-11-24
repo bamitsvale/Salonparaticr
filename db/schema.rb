@@ -14,15 +14,15 @@ ActiveRecord::Schema.define(version: 2021_11_17_010705) do
 
   create_table "citas", force: :cascade do |t|
     t.string "descripcion"
-    t.datetime "fecha_cita"
+    t.string "fecha_cita"
     t.string "nombre"
     t.string "apellido"
     t.string "email"
     t.string "telefono"
-    t.integer "users_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_citas_on_users_id"
+    t.index ["user_id"], name: "index_citas_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,5 +37,5 @@ ActiveRecord::Schema.define(version: 2021_11_17_010705) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "citas", "users", column: "users_id"
+  add_foreign_key "citas", "users"
 end

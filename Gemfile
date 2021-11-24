@@ -13,7 +13,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.8'
 
-
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
@@ -23,6 +22,7 @@ end
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem "letter_opener"
 end
 
 group :test do

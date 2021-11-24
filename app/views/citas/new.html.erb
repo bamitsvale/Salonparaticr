@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class='col-sm-6'>
+      <div class='row'>
+        <%= form_for @cita, url: citas_path do |f| %>
+        <div class= 'col-xs-12'>
+          <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+              <%= f.text_field :fecha_cita, class: 'form-control'%>
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class= 'col-xs-12'>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nombre</span>
+              <%= f.text_field :nombre, class: 'form-control', placeholder: 'nombre' %>
+            </div>
+          </div>
+          <div class= 'col-xs-12'>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Apellido</span>
+              <%= f.text_field :apellido, class: 'form-control', placeholder: 'apellido' %>
+            </div>
+          </div>
+          <div class= 'col-xs-12'>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Telefono</span>
+              <%= f.text_field :telefono, class: 'form-control', placeholder: '8888-8888' %>
+            </div>
+          </div>
+          <div class= 'col-xs-12'>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Descripcion</span>
+              <%= f.text_area :descripcion, class: 'form-control' %>
+            </div>
+          </div>
+          <!--   <div class= 'col-xs-12'>
+            <label class="btn btn-outline-primary" for="btnradio1">Manicura/Pedicura</label>
+            <input type="radio"  class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <br>
+            
+            <label class="btn btn-outline-primary" for="btnradio2">Cabello/Tinte</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <br>
+            <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+              </div> -->
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-secondary">Guardar</button>
+        <% end %>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#datetimepicker1').datetimepicker({
+         sideBySide: true,
+      });
+      })
+      
+    </script>
+  </div>
+</div>
