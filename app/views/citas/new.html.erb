@@ -5,8 +5,8 @@
         <%= form_for @cita, url: citas_path do |f| %>
         <div class= 'col-xs-12'>
           <div class="form-group">
-            <div class='input-group date' id='datetimepicker1'>
-              <%= f.text_field :fecha_cita, class: 'form-control'%>
+            <div class='input-group date'>
+              <%= f.text_field :fecha_cita, class: 'form-control', id:'datetimepicker1'%>
               <span class="input-group-addon">
               <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -36,17 +36,6 @@
               <%= f.text_area :descripcion, class: 'form-control' %>
             </div>
           </div>
-          <!--   <div class= 'col-xs-12'>
-            <label class="btn btn-outline-primary" for="btnradio1">Manicura/Pedicura</label>
-            <input type="radio"  class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <br>
-            
-            <label class="btn btn-outline-primary" for="btnradio2">Cabello/Tinte</label>
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <br>
-            <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-              </div> -->
         </div>
         <br/>
         <br/>
@@ -58,10 +47,10 @@
     <script type="text/javascript">
       $(document).ready(function() {
       $('#datetimepicker1').datetimepicker({
-         sideBySide: true,
-      });
+          sideBySide: true,
+          allowTimes:['10:00', '1:00', '4:00']
+       });
       })
-      
     </script>
   </div>
 </div>
